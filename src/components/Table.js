@@ -5,11 +5,11 @@ const Table = (props) => {
     <table className="Table">
       <thead>
         <tr>
-          {props.headings.map((heading, index) => <th key={ index }>{ heading }</th>)}
+          {Object.keys(props.data[0]).map((dataHeading, index) => <th key={ index }>{ dataHeading }</th>)}
         </tr>
       </thead>
       <tbody>
-        {props.body.map((row, index) => <TableRow key={ index } row={ row }/>)}
+        {props.data.map((row, index) => <TableRow key={ index } row={ row }/>)}
       </tbody>
     </table>
   );    
