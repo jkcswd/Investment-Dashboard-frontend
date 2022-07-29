@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-// A custom hook for fetching data from the API to separate presentation and application logic
+// Created separate presentation and application logic and increase usability of logic
 
 const useFetchData = (symbol, dateTo, dateFrom) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
   const fetchData =  async () => {
