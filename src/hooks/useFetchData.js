@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // Created separate presentation and application logic and increase usability of logic
 
-const useFetchData = (symbol, dateTo, dateFrom) => {
+const useFetchData = (symbol, dateTo = '2100-01-01', dateFrom = '1900-01-01') => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
