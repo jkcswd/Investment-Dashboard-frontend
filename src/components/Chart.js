@@ -1,9 +1,7 @@
 import useD3 from '../hooks/useD3';
-import d3Func from '../d3Functions/d3Func';
-
 
 const Chart = (props) => {
-  const svgRef = useD3(d3Func, props.chartData);
+  const svgRef = useD3(props.d3Func, props.chartData);
 
   return (
     <div className='Chart'>  
