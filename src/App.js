@@ -1,6 +1,5 @@
 import './App.css';
-import ChartDisplay from './components/chartDispaly';
-
+import ChartDisplay from './components/ChartDisplay';
 
 const App = () => {
 
