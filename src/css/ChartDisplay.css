@@ -1,0 +1,15 @@
+.ChartDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ChartDisplay form {
+  padding-bottom: 2em;
+}
+
+.ChartDisplay input {
+  padding:0.5em;
+  margin:1em;
+}
