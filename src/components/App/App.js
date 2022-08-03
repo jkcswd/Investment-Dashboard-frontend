@@ -4,7 +4,6 @@ import ChartDisplay from '../ChartDisplay/ChartDisplay';
 import TableDisplay from '../TableDisplay/TableDisplay'
 
 const App = () => {
-  // TODO: fix paths in components and change to scss
   const [showChart, setShowChart] = useState(false);
   const [showTable, setShowTable] = useState(false);
 
