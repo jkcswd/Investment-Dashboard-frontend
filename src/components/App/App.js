@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import ChartDisplay from './components/ChartDisplay';
-import TableDisplay from './components/TableDisplay'
+import ChartDisplay from '../ChartDisplay';
+import TableDisplay from '../TableDisplay'
 
 const App = () => {
+  // TODO: reorganise file structure and add scss
   const [showChart, setShowChart] = useState(false);
   const [showTable, setShowTable] = useState(false);
 
