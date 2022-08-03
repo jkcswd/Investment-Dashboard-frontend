@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Chart from '../components/Chart';
+import Chart from './Chart';
 import d3Func from '../d3Functions/d3Func'
 import fetchData from '../apiFunctions/fetchData'
 
