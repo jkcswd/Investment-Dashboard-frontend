@@ -1,4 +1,4 @@
-import TableRow from "./TableRow";
+import TableRow from "../TableRow/TableRow";
 
 const Table = (props) => {
   return (

@@ -1,11 +1,8 @@
 import { useState } from "react";
-import Chart from './Chart';
-import d3Func from '../d3Functions/d3Func'
-import fetchData from '../apiFunctions/fetchData'
-import '../css/ChartDisplay.css'
+import Table from '../Table/Table'
+import fetchData from '../../apiFunctions/fetchData'
 
-const ChartDisplay = () => {
-  // TODO: refactor form to allow use in chart or table
+const TableDisplay = () => {
   const [tickerSymbol, setTickerSymbol] = useState('');
   const [dateTo, setDateTo] = useState('');
   const [dateFrom, setDateFrom] = useState('');
@@ -20,21 +17,21 @@ const ChartDisplay = () => {
   }
 
   return (
-    <div className="ChartDisplay">
+    <div className="TableDisplay">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="ticker">Symbol:</label>
+          <label htmlFor="ticker">Ticker Symbol:</label>
           <input id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
-          <label htmlFor="dateFrom">From:</label>
-          <input id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
-          <label htmlFor="dateTo">To:</label>
+          <label htmlFor="dateTo">date to:</label>
           <input id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
+          <label htmlFor="dateFrom">date from:</label>
+          <input id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
           <input type="submit"/>
         </form>
         { data && 
-          <Chart chartData={data} d3Func={d3Func}/>
+          <Table data={data}/>
         }
     </div>
   )
 }
 
-export default ChartDisplay;
+export default TableDisplay;

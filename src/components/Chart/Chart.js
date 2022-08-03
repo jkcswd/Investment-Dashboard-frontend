@@ -1,5 +1,5 @@
-import useD3 from '../hooks/useD3';
-import '../css/Chart.css'
+import useD3 from '../../hooks/useD3';
+import './Chart.css'
 const Chart = (props) => {
   const svgRef = useD3(props.d3Func, props.chartData);
 
