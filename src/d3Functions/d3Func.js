@@ -5,9 +5,9 @@ const d3Func = (data, ref) => {//convert to date on x
   const height = 300;
   const padding = 50;
   const xScale = d3.scaleTime().domain(d3.extent(data, d => new Date(d.date))).range([(0+padding), (width-padding)]);
-  const yScale = d3.scaleLinear().domain([-0.5, d3.max(data, d => d.adjClose)]).range([(height-padding), (0+padding)]);
+  const yScale = d3.scaleLinear().domain(d3.extent(data, d => d.adjClose)).range([(height-padding), (0+padding)]);
   const line = d3.line().x(d => xScale(new Date(d.date))).y(d => yScale(d.adjClose));
-  const xAxis = d3.axisBottom(xScale).ticks(10)
+  const xAxis = d3.axisBottom(xScale).ticks(5)
   const yAxis = d3.axisLeft(yScale)
 
   d3.select('#xaxis').remove()
@@ -25,7 +25,7 @@ const d3Func = (data, ref) => {//convert to date on x
       .attr('id','yaxis')
       .call(yAxis)   
 
-  d3.select(ref.current).select('path').attr('d',value => line(data)).attr('fill', 'none').attr('stroke', 'black');
+  d3.select(ref.current).select('path').attr('d',value => line(data)).attr('stroke', 'blue');
 }
 
 export default d3Func;
