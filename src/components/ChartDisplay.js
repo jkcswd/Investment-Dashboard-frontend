@@ -5,6 +5,7 @@ import fetchData from '../apiFunctions/fetchData'
 import '../css/ChartDisplay.css'
 
 const ChartDisplay = () => {
+  // TODO: refactor form to allow use in chart or table
   const [tickerSymbol, setTickerSymbol] = useState('');
   const [dateTo, setDateTo] = useState('');
   const [dateFrom, setDateFrom] = useState('');
@@ -21,12 +22,12 @@ const ChartDisplay = () => {
   return (
     <div className="ChartDisplay">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="ticker">Ticker Symbol:</label>
+          <label htmlFor="ticker">Symbol:</label>
           <input id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
-          <label htmlFor="dateTo">date to:</label>
-          <input id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
-          <label htmlFor="dateFrom">date from:</label>
+          <label htmlFor="dateFrom">From:</label>
           <input id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
+          <label htmlFor="dateTo">To:</label>
+          <input id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
           <input type="submit"/>
         </form>
         { data && 
