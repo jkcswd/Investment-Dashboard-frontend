@@ -1,5 +1,6 @@
 .App {
   height: 100%;
+  color:antiquewhite
 }
 
 header {
@@ -20,6 +21,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: antiquewhite;
 }
 
 footer {
@@ -34,7 +36,29 @@ footer {
 }
 
 header, footer {
-  
-  color: whitesmoke;
-  
+  color: antiquewhite;
+}
+
+.App button {
+  font-size: 5em;
+  color: antiquewhite;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 3em;
+  background-color: grey;
+  box-shadow: 0 0 5px 5px grey;
+  transition: 500ms;
+}
+
+.App button:hover {
+  transform: scale(1.1);
+}
+
+.Table {
+  color: black;
+}
+
+svg {
+  background-color: white;
+  color: black;
 }
