@@ -1,0 +1,12 @@
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+.Table{
+  margin:1rem
+}
+thead {
+  background-color: aquamarine;
+}
