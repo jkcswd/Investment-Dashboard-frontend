@@ -1,4 +1,5 @@
 import TableRow from "../TableRow/TableRow";
+import './Table.css'
 
 const Table = (props) => {
   return (
