@@ -4,6 +4,7 @@ import ChartDisplay from '../ChartDisplay/ChartDisplay';
 import TableDisplay from '../TableDisplay/TableDisplay'
 
 const App = () => {
+  // TODO:  Add components rendering composite data from the data, set up scss, add tests
   const [showChart, setShowChart] = useState(false);
   const [showTable, setShowTable] = useState(false);
 
