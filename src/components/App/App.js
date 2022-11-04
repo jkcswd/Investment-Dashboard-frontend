@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import ChartDisplay from '../ChartDisplay/ChartDisplay';
-import TableDisplay from '../TableDisplay/TableDisplay'
+import TableDisplay from '../TableDisplay/TableDisplay';
+import MonthlyDisplay from '../MonthlyDisplay/MonthlyDisplay';
+import DailyDisplay from '../DailyDisplay/DailyDisplay'
 
 const App = () => {
   // TODO:  Add components rendering composite data from the data
