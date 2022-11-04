@@ -4,19 +4,27 @@ import ChartDisplay from '../ChartDisplay/ChartDisplay';
 import TableDisplay from '../TableDisplay/TableDisplay'
 
 const App = () => {
-  // TODO:  Add components rendering composite data from the data, set up scss, add tests
+  // TODO:  Add components rendering composite data from the data
   const [showChart, setShowChart] = useState(false);
   const [showTable, setShowTable] = useState(false);
+  const [showMonthlyReport, setShowMonthlyReport] = useState(false);
+  const [showDailyReport, setShowDailyReport] = useState(false);
 
   return (
     <div className="App">
       <header><h1>Investment Dashboard</h1></header>
       <main>
-        {!showChart && !showTable &&
+        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
           <button onClick={() => setShowChart(true)}>Charts</button>
         }
-        {!showChart && !showTable &&
+        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
           <button onClick={() => setShowTable(true)}>Tables</button>
+        }
+        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
+          <button onClick={() => setShowDailyReport(true)}>Daily Report</button>
+        }
+        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
+          <button onClick={() => setShowMonthlyReport(true)}>Monthly Report</button>
         }
         {showChart &&
           <ChartDisplay/>
@@ -24,6 +32,13 @@ const App = () => {
         { showTable &&
           <TableDisplay/>
         }
+        { showDailyReport &&
+          <DailyDisplay/>
+        }
+        { showMonthlyReport &&
+          <MonthlyDisplay/>
+        }
+        
       </main>
       <footer>Created by James Spencer</footer>
     </div>
