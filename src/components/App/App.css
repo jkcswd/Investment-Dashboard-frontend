@@ -1,6 +1,6 @@
 .App {
   height: 100%;
-  color:antiquewhite
+  color:white
 }
 
 header {
@@ -21,7 +21,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 footer {
@@ -36,12 +36,12 @@ footer {
 }
 
 header, footer {
-  color: antiquewhite;
+  color: white;
 }
 
 .App button {
   font-size: 5em;
-  color: antiquewhite;
+  color: white;
   border-radius: 5px;
   padding: 1em;
   margin: 3em;
