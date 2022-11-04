@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <header><h1>Investment Dashboard</h1></header>
+      <header><h1><a href='/'>Investment Dashboard</a></h1></header>
       <main>
         {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
           <button onClick={() => setShowChart(true)}>Charts</button>
