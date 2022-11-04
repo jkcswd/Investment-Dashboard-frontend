@@ -10,6 +10,9 @@ const MonthlyDisplay = () => {
         { data && 
           <Table data={data}/>
         }
+        { !data && 
+          <p>No report found</p>
+        }
     </div>
   )
 }
