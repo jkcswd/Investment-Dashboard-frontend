@@ -25,9 +25,6 @@ const App = () => {
         {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
           <button onClick={() => setShowDailyReport(true)}>Daily Report</button>
         }
-        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
-          <button onClick={() => setShowMonthlyReport(true)}>Monthly Report</button>
-        }
         {showChart &&
           <ChartDisplay/>
         }
@@ -36,9 +33,6 @@ const App = () => {
         }
         { showDailyReport &&
           <DailyDisplay/>
-        }
-        { showMonthlyReport &&
-          <MonthlyDisplay/>
         }
         
       </main>
