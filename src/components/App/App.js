@@ -9,20 +9,19 @@ const App = () => {
   // TODO:  Add components rendering composite data from the data
   const [showChart, setShowChart] = useState(false);
   const [showTable, setShowTable] = useState(false);
-  const [showMonthlyReport, setShowMonthlyReport] = useState(false);
   const [showDailyReport, setShowDailyReport] = useState(false);
 
   return (
     <div className="App">
       <header><h1><a href='/'>Investment Dashboard</a></h1></header>
       <main>
-        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
+        {!showChart && !showTable && !showDailyReport &&
           <button onClick={() => setShowChart(true)}>Charts</button>
         }
-        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
+        {!showChart && !showTable &&  !showDailyReport &&
           <button onClick={() => setShowTable(true)}>Tables</button>
         }
-        {!showChart && !showTable && !showMonthlyReport && !showDailyReport &&
+        {!showChart && !showTable && !showDailyReport &&
           <button onClick={() => setShowDailyReport(true)}>Daily Report</button>
         }
         {showChart &&
