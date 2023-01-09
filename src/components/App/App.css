@@ -1,5 +1,6 @@
 .App {
   height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
 header {
@@ -7,10 +8,9 @@ header {
   padding:20px;
   display: flex;
   align-items: center;
-  justify-content: center;
   border-bottom: 1px solid black;
   background: linear-gradient(grey, rgb(97, 97, 97));
-  font-size: 2em;
+  font-size: 1em;
 }
 
 main {
