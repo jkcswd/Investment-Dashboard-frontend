@@ -13,16 +13,23 @@ const App = () => {
 
   return (
     <div className="App">
-      <header><h1><a href='/'>Investment Dashboard</a></h1></header>
+      <header>
+          <h1><a href='/'>InDash</a></h1>
+          <nav>
+            <button className='nav-button' onClick={() => setShowChart(true)}>Charts</button>
+            <button className='nav-button' onClick={() => setShowTable(true)}>Tables</button>
+            <button className='nav-button' onClick={() => setShowDailyReport(true)}>Daily Report</button>
+          </nav>
+      </header>
       <main>
         {!showChart && !showTable && !showDailyReport &&
-          <button onClick={() => setShowChart(true)}>Charts</button>
+          <button className='main-button' onClick={() => setShowChart(true)}>Charts</button>
         }
         {!showChart && !showTable &&  !showDailyReport &&
-          <button onClick={() => setShowTable(true)}>Tables</button>
+          <button  className='main-button' onClick={() => setShowTable(true)}>Tables</button>
         }
         {!showChart && !showTable && !showDailyReport &&
-          <button onClick={() => setShowDailyReport(true)}>Daily Report</button>
+          <button  className='main-button' onClick={() => setShowDailyReport(true)}>Daily Report</button>
         }
         {showChart &&
           <ChartDisplay/>
@@ -33,9 +40,8 @@ const App = () => {
         { showDailyReport &&
           <DailyDisplay/>
         }
-        
       </main>
-      <footer>Created by James Spencer</footer>
+      <footer><p>Created by James Spencer 2023</p></footer>
     </div>
   );
 }
