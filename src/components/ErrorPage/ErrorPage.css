@@ -1,0 +1,11 @@
+.ErrorPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ErrorPage p {
+  margin-top:1rem;
+}

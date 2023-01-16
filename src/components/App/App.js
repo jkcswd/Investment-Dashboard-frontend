@@ -1,45 +1,23 @@
 import { useState } from 'react';
 import './App.css';
-import ChartDisplay from '../ChartDisplay/ChartDisplay';
-import TableDisplay from '../TableDisplay/TableDisplay';
-import MonthlyDisplay from '../MonthlyDisplay/MonthlyDisplay';
-import DailyDisplay from '../DailyDisplay/DailyDisplay'
+import { Outlet, Link } from 'react-router-dom';
 
 const App = () => {
-  // TODO:  Add components rendering composite data from the data
-  const [showChart, setShowChart] = useState(false);
-  const [showTable, setShowTable] = useState(false);
-  const [showDailyReport, setShowDailyReport] = useState(false);
 
   return (
     <div className="App">
       <header>
           <h1><a href='/'>InDash</a></h1>
-          <nav>
-            <button className='nav-button' onClick={() => setShowChart(true)}>Charts</button>
-            <button className='nav-button' onClick={() => setShowTable(true)}>Tables</button>
-            <button className='nav-button' onClick={() => setShowDailyReport(true)}>Daily Report</button>
+          <nav className='main-nav'>
+            <ul>
+              <li><Link to={`/charts`}>Economic Data and Financial Securities Charts</Link></li>
+              <li><Link to={`/datasets`}>Economic Data and Financial Securities Tabular Data</Link></li>
+              <li><Link to={`/daily-report`}>Daily Report</Link></li>
+            </ul>
           </nav>
       </header>
       <main>
-        {!showChart && !showTable && !showDailyReport &&
-          <button className='main-button' onClick={() => setShowChart(true)}>Charts</button>
-        }
-        {!showChart && !showTable &&  !showDailyReport &&
-          <button  className='main-button' onClick={() => setShowTable(true)}>Tables</button>
-        }
-        {!showChart && !showTable && !showDailyReport &&
-          <button  className='main-button' onClick={() => setShowDailyReport(true)}>Daily Report</button>
-        }
-        {showChart &&
-          <ChartDisplay/>
-        }
-        { showTable &&
-          <TableDisplay/>
-        }
-        { showDailyReport &&
-          <DailyDisplay/>
-        }
+        <Outlet/>
       </main>
       <footer><p>Created by James Spencer 2023</p></footer>
     </div>
