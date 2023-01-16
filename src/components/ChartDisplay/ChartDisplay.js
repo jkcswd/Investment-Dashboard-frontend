@@ -22,13 +22,13 @@ const ChartDisplay = () => {
   return (
     <div className="ChartDisplay">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="ticker">Symbol:</label>
-          <input id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
-          <label htmlFor="dateFrom">From:</label>
-          <input id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
-          <label htmlFor="dateTo">To:</label>
-          <input id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
-          <input type="submit"/>
+          <label className="ticker-form-label" htmlFor="ticker">Symbol:</label>
+          <input className="ticker-form-input"  id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
+          <label className="ticker-form-label" htmlFor="dateFrom">From:</label>
+          <input className="ticker-form-input"   id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
+          <label className="ticker-form-label" htmlFor="dateTo">To:</label>
+          <input className="ticker-form-input"  id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
+          <input className="ticker-form-button"  type="submit"/>
         </form>
         { data && 
           <Chart chartData={data} d3Func={d3Func}/>

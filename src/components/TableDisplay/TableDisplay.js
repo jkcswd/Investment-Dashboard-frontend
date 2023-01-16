@@ -19,13 +19,13 @@ const TableDisplay = () => {
   return (
     <div className="TableDisplay">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="ticker">Ticker Symbol:</label>
-          <input id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
-          <label htmlFor="dateTo">date to:</label>
-          <input id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
-          <label htmlFor="dateFrom">date from:</label>
-          <input id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
-          <input type="submit"/>
+          <label className="ticker-form-label" htmlFor="ticker">Ticker Symbol:</label>
+          <input className="ticker-form-input" id="ticker" type="text" value={tickerSymbol} onChange={ e => setTickerSymbol(e.target.value) } />
+          <label className="ticker-form-label" htmlFor="dateTo">date to:</label>
+          <input className="ticker-form-input"  id="dateTo" type="date" value={dateTo} onChange={ e => setDateTo(e.target.value) } />
+          <label className="ticker-form-label" htmlFor="dateFrom">date from:</label>
+          <input className="ticker-form-input"  id="dateFrom" type="date" value={dateFrom} onChange={ e => setDateFrom(e.target.value) } />
+          <input className="ticker-form-button" type="submit"/>
         </form>
         { data && 
           <Table data={data}/>
