@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import Table from '../Table/Table'
 import fetchPortfolio from "../../apiFunctions/fetchPortfolio";
-
+import './PortfolioTracker.css'
 
 const PortfolioTracker = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchPortfolio();
+      const data = await fetchPortfolio('Test Portfolio');
       console.log(data)
       setData(data);
     }
@@ -17,9 +16,14 @@ const PortfolioTracker = () => {
   });
 
   return (
-    <div className="DailyDisplay">
+    <div className="PortfolioTracker">
         { data && 
-          <Table data={data}/>
+          <div className="tracking-container">
+            <h2>{data.portfolioName}</h2>
+            <p>Initial Capital: {data.initialCapital}</p>
+            <p>Current Capital: {data.currentCapital}</p>
+            <p>Date Opened: { new Date(data.dateOpened).toDateString() }</p>
+          </div>
         }
         { !data && 
           <p>No portfolio found</p>
@@ -28,4 +32,4 @@ const PortfolioTracker = () => {
   )
 }
 
-export default DailyDisplay;
+export default PortfolioTracker;
