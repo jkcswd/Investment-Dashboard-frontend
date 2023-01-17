@@ -15,14 +15,19 @@ const PortfolioTracker = () => {
     fetchData();
   });
 
+  const percentageCalculation = (cur,init) => {
+    return (cur/init)*100
+  }
+
   return (
     <div className="PortfolioTracker">
         { data && 
           <div className="tracking-container">
             <h2>{data.portfolioName}</h2>
-            <p>Initial Capital: {data.initialCapital}</p>
-            <p>Current Capital: {data.currentCapital}</p>
+            <p>Initial Capital: { data.initialCapital }</p>
+            <p>Current Capital: { data.currentCapital }</p>
             <p>Date Opened: { new Date(data.dateOpened).toDateString() }</p>
+            <p>Total ROI: { percentageCalculation(data.currentCapital,data.initialCapital) }</p>
           </div>
         }
         { !data && 
