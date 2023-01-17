@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ChartDisplay from './components/ChartDisplay/ChartDisplay';
 import TableDisplay from './components/TableDisplay/TableDisplay';
 import DailyDisplay from './components/DailyDisplay/DailyDisplay';
+import PortfolioTracker from './components/PortfolioTracker/PortfolioTracker';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/daily-report",
         element: <DailyDisplay/>,
+      },
+      {
+        path: "/portfolio-tracker",
+        element: <PortfolioTracker/>,
       },
     ],
   },
