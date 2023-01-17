@@ -76,6 +76,7 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid var(--secondary);
   color: var(--secondary);
+  background-color: var(--primary);
   padding: 1rem;
   position: fixed;
   width: 96.5%;
@@ -83,11 +84,10 @@ header {
 
 main {
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: var(--primary);
   min-height: 100vh;
-  padding-top: 3rem;
+  padding-top: 15rem;
 }
 
 footer {
@@ -115,6 +115,18 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+td {
+  border: 1px solid var(--secondary);
+  padding: 0.25rem;
+}
+
+th {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--highlight);
+  padding: 0.25rem;
 }
 
 .main-nav {
