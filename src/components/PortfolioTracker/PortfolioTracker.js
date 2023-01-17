@@ -8,7 +8,6 @@ const PortfolioTracker = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchPortfolio('Test Portfolio');
-      console.log(data)
       setData(data);
     }
     
@@ -16,7 +15,7 @@ const PortfolioTracker = () => {
   });
 
   const percentageCalculation = (cur,init) => {
-    return (cur/init)*100
+    return (cur/init) * 100;
   }
 
   return (
