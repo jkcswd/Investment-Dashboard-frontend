@@ -8,6 +8,7 @@ import ChartDisplay from './components/ChartDisplay/ChartDisplay';
 import TableDisplay from './components/TableDisplay/TableDisplay';
 import DailyDisplay from './components/DailyDisplay/DailyDisplay';
 import PortfolioTracker from './components/PortfolioTracker/PortfolioTracker';
+import Home from './components/Home/Home';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     element: <App/>,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element:<Home/>,
+      },
       {
         path: "charts",
         element: <ChartDisplay/>,
