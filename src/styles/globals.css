@@ -21,11 +21,20 @@ body {
   color: var(--secondary);
 }
 
-body {
- 
-}
-
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
