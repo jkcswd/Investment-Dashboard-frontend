@@ -17,8 +17,8 @@ export default function Layout( { children } : LayoutProps) {
           <h1><Link href={`/`}>InDash</Link></h1>
           <nav className={styles.nav}>
             <ul>
-              <li><Link href={`/charts`}>Economic Data and Financial Securities Charts</Link></li>
-              <li><Link href={`/datasets`}>Economic Data and Financial Securities Tabular Data</Link></li>
+              {/*<li><Link href={`/charts`}>Economic Data and Financial Securities Charts</Link></li>*/}
+              {/*<li><Link href={`/datasets`}>Economic Data and Financial Securities Tabular Data</Link></li> */}
               {/*<li><Link to={`/daily-report`}>Daily Report</Link></li> */}
               <li><Link href={`/portfolio-tracker`}>Portfolio Tracker</Link></li>
             </ul>
