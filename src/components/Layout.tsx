@@ -1,16 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import styles from '@/styles/Layout.module.css'
+
+type LayoutProps = {
+  children: React.ReactNode,
+};
 
 
-export default function Layout( children : React.ReactNode) {
+export default function Layout( { children } : LayoutProps) {
   return (
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header className={styles.header}>
           <h1><Link href={`/`}>InDash</Link></h1>
-          <nav className='main-nav'>
+          <nav className={styles.nav}>
             <ul>
               <li><Link href={`/charts`}>Economic Data and Financial Securities Charts</Link></li>
               <li><Link href={`/datasets`}>Economic Data and Financial Securities Tabular Data</Link></li>
@@ -19,7 +24,7 @@ export default function Layout( children : React.ReactNode) {
             </ul>
           </nav>
       </header>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </div>
   );
 }
