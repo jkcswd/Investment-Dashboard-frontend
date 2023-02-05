@@ -4,6 +4,7 @@ import '@testing-library/jest-dom'
 
 describe('Home', () => {
   it('renders a heading', () => {
+    
     render(<Home />)
 
     const heading = screen.getByRole('heading', {
@@ -11,5 +12,10 @@ describe('Home', () => {
     })
 
     expect(heading).toBeInTheDocument()
+  })
+
+  it('Snapshot: renders homepage unchanged', () => {
+    const { container } = render(<Home />)
+    expect(container).toMatchSnapshot()
   })
 })
