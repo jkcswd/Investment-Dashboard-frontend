@@ -8,6 +8,7 @@
 # testing
 /coverage
 .swc
+*.snap
 
 # next.js
 /.next/
