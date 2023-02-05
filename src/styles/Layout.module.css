@@ -1,0 +1,26 @@
+.header {
+  margin: 0 1rem 1rem 1rem ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary);
+  color: var(--secondary);
+  background-color: var(--primary);
+  padding: 1rem;
+  position: fixed;
+  width: 96.5%;
+}
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+  min-height: 100vh;
+  padding-top: 15rem;
+}
+
+
+.nav {
+  margin-right: 1rem;
+}
