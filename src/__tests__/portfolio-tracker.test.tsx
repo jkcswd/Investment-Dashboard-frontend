@@ -4,9 +4,16 @@ import '@testing-library/jest-dom'
 
 describe('PortfolioTracker', () => {
   it('renders unchanged (Snapshot)', () => {
-    const { container } = render(<PortfolioTracker />)
-    expect(container).toMatchSnapshot()
+    const { container } = render(<PortfolioTracker />);
+
+    expect(container).toMatchSnapshot();
   })
 
+  it('Renders a nav bar for portfolio navigation', () => {
+    render(<PortfolioTracker />);
 
+    const nav = screen.getByRole('navigation', { name: 'portfolio-nav' });
+
+    expect(nav).toBeInTheDocument();
+  })
 })
