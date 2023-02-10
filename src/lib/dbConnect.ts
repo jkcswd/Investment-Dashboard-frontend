@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const MONGODB_URI : string = "mongodb://localhost:27017/investment_app"; 
 
-export const connect = async () => {
+const dbConnect = async () => {
   const connection = await mongoose
     .connect(MONGODB_URI)
     .catch(err => console.log(err))
@@ -10,3 +10,5 @@ export const connect = async () => {
 
   return connection
 }
+
+export default dbConnect
