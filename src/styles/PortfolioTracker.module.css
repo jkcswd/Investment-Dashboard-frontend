@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-weight: 700;
+}
+
+.navItem {
+  border: 1px solid var(--primary);
+  height: fit-content;
+  padding: 1rem;
+  transition: 1000ms
+}
+
+.navItem:hover {
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+}
