@@ -7,7 +7,7 @@ export default function PortfolioTracker() {
       <Head>
         <title>InDash - Portfolio Tracker</title>
       </Head>
-        <p>TRACK</p>
+        <nav aria-label='portfolio-nav'></nav>
     </Layout>
   )
 }
