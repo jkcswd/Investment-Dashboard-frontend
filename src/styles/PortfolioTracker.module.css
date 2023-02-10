@@ -16,3 +16,8 @@
   border: 1px solid var(--secondary);
   border-radius: 5px;
 }
+
+.pageContent {
+  margin-top: 5rem;
+  text-align: center;
+}
