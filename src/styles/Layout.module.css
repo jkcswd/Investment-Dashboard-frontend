@@ -24,3 +24,11 @@
 .nav {
   margin-right: 1rem;
 }
+
+.navItem {
+  transition: 1000ms;
+}
+
+.navItem:hover {
+  opacity: 0.6;
+}
