@@ -13,6 +13,12 @@ export default function PortfolioTracker() {
           <Link className={styles.navItem} href='trade-input'>Add Trade Enty/Exit</Link>
           <Link className={styles.navItem} href='adjustment-input'>Add Portfolio Adjustment</Link>
         </nav>
+        <div className={styles.pageContent}>
+          <h2>Portfolio Stats</h2>
+          <p>Current Value: $100000</p>
+          <p>Total Increase: $0 (0%)</p>
+          <p>Starting Value: $100000 </p>
+        </div>
     </Layout>
   )
 }
