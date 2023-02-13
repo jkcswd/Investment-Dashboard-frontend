@@ -4,9 +4,3 @@ export interface ResponseFuncs {
   PUT?: Function
   DELETE?: Function
 }
-
-export interface User {
-  _id?: number
-  userName: string
-  email: string
-}
