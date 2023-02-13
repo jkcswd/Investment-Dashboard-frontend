@@ -8,8 +8,6 @@ const dbConnect = async () => {
     .catch(err => console.log(err))
 
   console.log("Mongoose Connection Established")
-
-  return connection
 }
 
 export default dbConnect
